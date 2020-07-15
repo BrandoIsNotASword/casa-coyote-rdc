@@ -1,18 +1,56 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Global, css } from '@emotion/core'
+import { ThemeProvider, CSSReset } from '@chakra-ui/core'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Header from './header'
 
-import Header from "./header"
-import "./layout.css"
+import CircularStdBookWoff from '../fonts/CircularStd-Book.woff'
+import CircularStdBookWoff2 from '../fonts/CircularStd-Book.woff2'
+import CircularStdMediumWoff from '../fonts/CircularStd-Medium.woff'
+import CircularStdMediumWoff2 from '../fonts/CircularStd-Medium.woff2'
+import CircularStdBlackWoff from '../fonts/CircularStd-Black.woff'
+import CircularStdBlackWoff2 from '../fonts/CircularStd-Black.woff2'
 
-const Layout = ({ children }) => {
+const globalStyles = css`
+  @font-face {
+    font-family: CircularStd;
+    font-style: normal;
+    src: url(${CircularStdBookWoff2}) format('woff2'), url(${CircularStdBookWoff}) format('woff');
+    font-display: swap;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: CircularStd;
+    font-style: normal;
+    src: url(${CircularStdMediumWoff2}) format('woff2'),
+      url(${CircularStdMediumWoff}) format('woff');
+    font-display: swap;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: CircularStd;
+    font-weight: 700;
+    font-style: normal;
+    src: url(${CircularStdBlackWoff2}) format('woff2'), url(${CircularStdBlackWoff}) format('woff');
+    font-display: swap;
+  }
+
+  * {
+    font-size: 14px;
+    font-family: CircularStd, Arial, Helvetica, sans-serif !important;
+    font-weight: 300;
+
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+`
+
+function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +62,9 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider>
+      <CSSReset />
+      <Global styles={globalStyles} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -40,7 +80,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 
