@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
-import { ThemeProvider, CSSReset } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset, theme } from '@chakra-ui/core'
 
 import Header from './header'
 
@@ -12,6 +12,18 @@ import CircularStdMediumWoff from '../fonts/CircularStd-Medium.woff'
 import CircularStdMediumWoff2 from '../fonts/CircularStd-Medium.woff2'
 import CircularStdBlackWoff from '../fonts/CircularStd-Black.woff'
 import CircularStdBlackWoff2 from '../fonts/CircularStd-Black.woff2'
+
+const customTheme = {
+  ...theme,
+  breakpoints: ['480px', '720px', '1024px', '1280px', '1440px', '1760px'],
+}
+
+customTheme.breakpoints.sm = customTheme.breakpoints[0]
+customTheme.breakpoints.md = customTheme.breakpoints[1]
+customTheme.breakpoints.lg = customTheme.breakpoints[2]
+customTheme.breakpoints.xl = customTheme.breakpoints[3]
+customTheme.breakpoints.xx = customTheme.breakpoints[4]
+customTheme.breakpoints.mw = customTheme.breakpoints[5]
 
 const globalStyles = css`
   @font-face {
@@ -48,6 +60,16 @@ const globalStyles = css`
       font-size: 16px;
     }
   }
+
+  p,
+  span {
+    max-height: 999999px;
+  }
+
+  p,
+  h2 {
+    opacity: 0.85;
+  }
 `
 
 function Layout({ children }) {
@@ -62,7 +84,7 @@ function Layout({ children }) {
   `)
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={customTheme}>
       <CSSReset />
       <Global styles={globalStyles} />
       <Header siteTitle={data.site.siteMetadata.title} />
