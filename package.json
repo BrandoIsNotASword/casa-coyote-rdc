@@ -17,14 +17,18 @@
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-react-i18next": "0.0.25",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
+    "i18next": "^19.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-i18next": "^11.7.0",
     "react-icons": "^3.10.0",
+    "recoil": "0.0.10",
     "uuid": "^8.2.0"
   },
   "devDependencies": {
