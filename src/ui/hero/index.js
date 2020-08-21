@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Flex, Heading, Button } from '@chakra-ui/core'
+import { Flex, Button } from '@chakra-ui/core'
+
+import { H1, H2 } from '../globals'
 
 export function HeroBody({ children, ...restProps }) {
   return (
@@ -25,8 +27,7 @@ HeroBody.defaultProps = {
 
 export function HeroTitle({ children, ...restProps }) {
   return (
-    <Heading
-      as="h1"
+    <H1
       color="white"
       fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}
       paddingBottom={2}
@@ -34,7 +35,7 @@ export function HeroTitle({ children, ...restProps }) {
       {...restProps}
     >
       {children}
-    </Heading>
+    </H1>
   )
 }
 
@@ -48,15 +49,9 @@ HeroTitle.defaultProps = {
 
 export function HeroSubtitle({ children, ...restProps }) {
   return (
-    <Heading
-      as="h2"
-      color="white"
-      fontWeight="light"
-      fontSize={{ base: 'xl', md: '2xl' }}
-      {...restProps}
-    >
+    <H2 color="white" fontWeight="light" fontSize={{ base: 'xl', md: '2xl' }} {...restProps}>
       {children}
-    </Heading>
+    </H2>
   )
 }
 

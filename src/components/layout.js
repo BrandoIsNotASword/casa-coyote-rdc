@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Global, css } from '@emotion/core'
-import { ThemeProvider, CSSReset, theme, Flex } from '@chakra-ui/core'
+import { FiMapPin, FiMail, FiPhone, FiInstagram } from 'react-icons/fi'
+import { ThemeProvider, CSSReset, theme, Flex, Text, Stack, Link, Image } from '@chakra-ui/core'
 
 import Header from './header'
-import Footer from './footer'
+import { Footer, FooterBody, FooterBottom, FooterDivider, FooterColumn } from '../ui'
 
 import CircularStdBookWoff from '../fonts/CircularStd-Book.woff'
 import CircularStdBookWoff2 from '../fonts/CircularStd-Book.woff2'
@@ -12,6 +13,8 @@ import CircularStdMediumWoff from '../fonts/CircularStd-Medium.woff'
 import CircularStdMediumWoff2 from '../fonts/CircularStd-Medium.woff2'
 import CircularStdBlackWoff from '../fonts/CircularStd-Black.woff'
 import CircularStdBlackWoff2 from '../fonts/CircularStd-Black.woff2'
+
+import footerLogo from '../images/casa-coyote-logo.png'
 
 const customTheme = {
   ...theme,
@@ -83,7 +86,75 @@ function Layout({ children }) {
         <Flex direction="column" as="main" flex="1" width="100%">
           {children}
         </Flex>
-        <Footer />
+        <Footer>
+          <FooterBody>
+            <FooterColumn
+              textAlign="center"
+              align="center"
+              direction="column"
+              maxWidth="350px"
+              marginX="auto"
+            >
+              <Link href="/" maxWidth="150px" marginBottom={4}>
+                <Image src={footerLogo} />
+              </Link>
+              <Text>
+                Amazing experience that will free your mind & touch your soul. Very cozy rooms, 100%
+                ECO PRIVATE SUITES. Located at the most exclusive área of Tulum.
+              </Text>
+            </FooterColumn>
+
+            <FooterColumn title="Contact us" marginTop={6} direction="column" marginX="auto">
+              <Stack spacing={3}>
+                <Stack isInline align="center" spacing={3} shouldWrapChildren>
+                  <FiMapPin size="1.25rem" />
+                  <Text>Carretera Tulum Boca Paila km 9.2</Text>
+                </Stack>
+                <Link href="mailto:reservaciones@hotelcasacoyotetulum.com">
+                  <Stack isInline align="center" spacing={3} shouldWrapChildren>
+                    <FiMail size="1.25rem" />
+                    <Text wordBreak="break-word" lineHeight="normal">
+                      admongrupomanifesto@gmail.com
+                    </Text>
+                  </Stack>
+                </Link>
+                <Link href="tel:+5219841135252">
+                  <Stack isInline align="center" spacing={3} shouldWrapChildren>
+                    <FiPhone size="1.25rem" />
+                    <Text>+52 1 984 113 5252</Text>
+                  </Stack>
+                </Link>
+                <Link
+                  href="https://www.instagram.com/casa_coyote/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Stack isInline align="center" spacing={3} shouldWrapChildren>
+                    <FiInstagram size="1.25rem" />
+                    <Text>casa_coyote</Text>
+                  </Stack>
+                </Link>
+              </Stack>
+            </FooterColumn>
+          </FooterBody>
+
+          <FooterDivider />
+
+          <FooterBottom>
+            <Text fontSize="sm" textAlign="center">
+              © Hotel Casa Coyote Tulum. All Rights Reserved. Web development by{' '}
+              <a
+                href="https://hmnagency.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ fontSize: 'inherit', textDecoration: 'underline' }}
+              >
+                hmnagency
+              </a>
+              .
+            </Text>
+          </FooterBottom>
+        </Footer>
       </Flex>
     </ThemeProvider>
   )

@@ -40,7 +40,7 @@ function Header() {
           <Logo src={logo} />
         </LogoLink>
       }
-      button={<Button>Book now</Button>}
+      button={<Button onClick={() => alert('ay!')}>Book now</Button>}
     >
       <NavLink to="#hotel">
         <Text>hotel</Text>
