@@ -63,6 +63,7 @@ const globalStyles = css`
 
   p,
   span {
+    font-size: 16px;
     max-height: 999999px;
   }
 
@@ -79,7 +80,7 @@ function Layout({ children }) {
       <Global styles={globalStyles} />
       <Flex direction="column" minHeight="100vh">
         <Header />
-        <Flex as="main" flex="1">
+        <Flex direction="column" as="main" flex="1" width="100%">
           {children}
         </Flex>
         <Footer />
