@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Flex, Button } from '@chakra-ui/core'
+import { Flex, Box } from '@chakra-ui/core'
 
 import { H1, H2 } from '../globals'
 
@@ -63,19 +63,19 @@ HeroSubtitle.defaultProps = {
   children: null,
 }
 
-export function HeroButton({ children, ...restProps }) {
+export function HeroCta({ children, ...restProps }) {
   return (
-    <Button size="lg" marginTop={5} width={{ sm: 'fit-content' }} {...restProps}>
+    <Box marginTop={5} width={{ sm: 'fit-content' }} {...restProps}>
       {children}
-    </Button>
+    </Box>
   )
 }
 
-HeroButton.propTypes = {
+HeroCta.propTypes = {
   children: PropTypes.node,
 }
 
-HeroButton.defaultProps = {
+HeroCta.defaultProps = {
   children: null,
 }
 

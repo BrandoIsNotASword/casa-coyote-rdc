@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby-plugin-react-i18next'
 import styled from '@emotion/styled'
 
-import { Button, Text } from '@chakra-ui/core'
+import { Text } from '@chakra-ui/core'
 
 import { Menu } from '../ui'
+import BookButton from '../components/bookButton'
 
 import logo from '../images/casa-coyote-logo.png'
 
@@ -40,19 +41,13 @@ function Header() {
           <Logo src={logo} />
         </LogoLink>
       }
-      button={<Button onClick={() => alert('ay!')}>Book now</Button>}
+      button={<BookButton />}
     >
       <NavLink to="#hotel">
         <Text>Hotel</Text>
       </NavLink>
-      <NavLink to="#rooms">
-        <Text>Rooms</Text>
-      </NavLink>
       <NavLink to="#experience">
         <Text>Experience</Text>
-      </NavLink>
-      <NavLink to="#restaurant">
-        <Text>Restaurant</Text>
       </NavLink>
       <NavLink to="#contact">
         <Text>Contact</Text>

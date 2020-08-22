@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Flex, Box, Text, useTheme } from '@chakra-ui/core'
 
 import { flexPositions } from '../utils'
-import { H3 } from '../globals'
+import { ROW_GAP, H3 } from '../globals'
 
 function Section({ children, fullWidth, titleAlign, title, subtitle, ...restProps }) {
   const theme = useTheme()
@@ -25,7 +25,7 @@ function Section({ children, fullWidth, titleAlign, title, subtitle, ...restProp
       {...restProps}
     >
       {(title || subtitle) && (
-        <Flex direction="column" marginBottom={6} alignItems={flexPositions[titleAlign]}>
+        <Flex direction="column" marginBottom={ROW_GAP} alignItems={flexPositions[titleAlign]}>
           <Box maxWidth="720px" textAlign={titleAlign}>
             {title && <H3>{title}</H3>}
             {subtitle && <Text marginTop={2}>{subtitle}</Text>}

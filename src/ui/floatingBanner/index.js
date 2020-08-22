@@ -9,7 +9,7 @@ function FloatingBanner({ children }) {
 
   useScrollPosition(
     ({ currPos }) => {
-      if (currPos.y * -1 > window.innerHeight / 2) setIsVisible(true)
+      if (currPos.y * -1 > window.innerHeight / 3) setIsVisible(true)
       else setIsVisible(false)
     },
     [],

@@ -1,11 +1,13 @@
 import React from 'react'
+import { useRecoilState } from 'recoil'
 import PropTypes from 'prop-types'
 import { Global, css } from '@emotion/core'
 import { FiMapPin, FiMail, FiPhone, FiInstagram } from 'react-icons/fi'
 import { ThemeProvider, CSSReset, theme, Flex, Text, Stack, Link, Image } from '@chakra-ui/core'
 
 import Header from './header'
-import { Footer, FooterBody, FooterBottom, FooterDivider, FooterColumn } from '../ui'
+import WhatsappButton from './whatsappButton'
+import { Footer, FooterBody, FooterBottom, FooterDivider, FooterColumn, BookingModal } from '../ui'
 
 import CircularStdBookWoff from '../fonts/CircularStd-Book.woff'
 import CircularStdBookWoff2 from '../fonts/CircularStd-Book.woff2'
@@ -15,6 +17,9 @@ import CircularStdBlackWoff from '../fonts/CircularStd-Black.woff'
 import CircularStdBlackWoff2 from '../fonts/CircularStd-Black.woff2'
 
 import footerLogo from '../images/casa-coyote-logo.png'
+import grupoManifestoLogo from '../images/grupo-manifesto-logo.png'
+
+import { bookingModalState } from '../store'
 
 const customTheme = {
   ...theme,
@@ -77,6 +82,8 @@ const globalStyles = css`
 `
 
 function Layout({ children }) {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useRecoilState(bookingModalState)
+
   return (
     <ThemeProvider theme={customTheme}>
       <CSSReset />
@@ -136,6 +143,13 @@ function Layout({ children }) {
                     <Text>casa_coyote</Text>
                   </Stack>
                 </Link>
+                <Image
+                  height="100%"
+                  width="100%"
+                  marginX="auto"
+                  maxWidth="100px"
+                  src={grupoManifestoLogo}
+                />
               </Stack>
             </FooterColumn>
           </FooterBody>
@@ -144,7 +158,7 @@ function Layout({ children }) {
 
           <FooterBottom>
             <Text fontSize="sm" textAlign="center">
-              © Hotel Casa Coyote Tulum. All Rights Reserved. Web development by{' '}
+              © Hotel Casa Coyote Ruta de los Cenotes. All Rights Reserved. Web development by{' '}
               <a
                 href="https://hmnagency.com/"
                 target="_blank"
@@ -158,6 +172,8 @@ function Layout({ children }) {
           </FooterBottom>
         </Footer>
       </Flex>
+      <WhatsappButton />
+      <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
     </ThemeProvider>
   )
 }
