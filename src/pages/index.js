@@ -145,7 +145,7 @@ function IndexPage({ data }) {
         </Section>
 
         <Section id="contact" backgroundColor="gray.100" fullWidth>
-          <Box maxWidth="860px" marginX="auto">
+          <Box maxWidth="860px" marginX="auto" paddingX={8}>
             <Stack marginBottom={10} textAlign="center" marginX="auto" maxWidth="720px">
               <Heading as="h3">Casa Coyote Ruta de los Cenotes</Heading>
               <Text>

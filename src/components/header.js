@@ -41,7 +41,7 @@ function Header() {
           <Logo src={logo} />
         </LogoLink>
       }
-      button={<BookButton />}
+      button={<BookButton size="md" />}
     >
       <NavLink to="#hotel">
         <Text>Hotel</Text>
