@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SimpleGrid, Heading, Text, Stack } from '@chakra-ui/core'
+import { SimpleGrid, Box, Heading, Text, Stack } from '@chakra-ui/core'
 
 import { LIS_GAP, COL_GAP, ROW_GAP } from '../globals'
 
@@ -20,17 +20,20 @@ FeatureList.defaultProps = {
   children: null,
 }
 
-export function FeatureItem({ title, desc, icon, ...restProps }) {
+export function FeatureItem({ title, desc, image, icon, ...restProps }) {
   return (
-    <Stack
-      shouldWrapChildren
-      direction="column"
-      borderRadius="15px"
-      width="100%"
-      spacing={LIS_GAP}
-      {...restProps}
-    >
-      {icon}
+    <Stack direction="column" borderRadius="15px" width="100%" spacing={LIS_GAP} {...restProps}>
+      {image && (
+        <Box
+          backgroundImage={`url(${image})`}
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          backgroundSize="cover"
+          paddingBottom="66%"
+          borderRadius="15px"
+        />
+      )}
+      <Box width="fit-content">{icon}</Box>
       <Heading as="h4" fontWeight="bold" fontSize="xl">
         {title}
       </Heading>
@@ -42,12 +45,14 @@ export function FeatureItem({ title, desc, icon, ...restProps }) {
 FeatureItem.propTypes = {
   title: PropTypes.string,
   desc: PropTypes.string,
+  image: PropTypes.string,
   icon: PropTypes.node,
 }
 
 FeatureItem.defaultProps = {
   title: '',
   desc: '',
+  image: '',
   icon: null,
 }
 

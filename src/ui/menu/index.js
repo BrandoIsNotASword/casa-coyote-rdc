@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex, Box, Stack } from '@chakra-ui/core'
 
+import { flexPositions } from '../utils'
 import { GAP } from '../globals'
 
 function Nav({ children, ...restProps }) {
@@ -23,12 +24,6 @@ function Nav({ children, ...restProps }) {
 }
 
 function Menu({ children, logo, button, navPosition, ...restProps }) {
-  const flexPositions = {
-    left: 'flex-start',
-    center: 'center',
-    right: 'flex-end',
-  }
-
   return (
     <Flex
       as="header"

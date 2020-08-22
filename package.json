@@ -8,6 +8,7 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@n8tb1t/use-scroll-position": "^1.0.43",
     "emotion-theming": "^10.0.27",
     "formik": "^2.1.5",
     "gatsby": "^2.23.12",

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Heading } from '@chakra-ui/core'
 
-export const LIS_GAP = 2
+export const LIS_GAP = 3
 export const COL_GAP = 8
 export const ROW_GAP = 10
 export const GAP = 6

@@ -104,6 +104,8 @@ function Layout({ children }) {
               </Text>
             </FooterColumn>
 
+            <FooterColumn />
+
             <FooterColumn title="Contact us" marginTop={6} direction="column" marginX="auto">
               <Stack spacing={3}>
                 <Stack isInline align="center" spacing={3} shouldWrapChildren>

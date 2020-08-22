@@ -18,7 +18,7 @@ export function FooterColumn({ title, children, ...restProps }) {
   )
 }
 
-export function FooterBody({ children, ...restProps }) {
+export function FooterBody({ children, columns, ...restProps }) {
   return (
     <SimpleGrid
       columns={{ base: 1, lg: children.length }}
@@ -33,6 +33,7 @@ export function FooterBody({ children, ...restProps }) {
 }
 
 FooterBody.propTypes = {
+  columns: PropTypes.number,
   children: PropTypes.node,
 }
 

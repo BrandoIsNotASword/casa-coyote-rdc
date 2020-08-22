@@ -43,19 +43,19 @@ function Header() {
       button={<Button onClick={() => alert('ay!')}>Book now</Button>}
     >
       <NavLink to="#hotel">
-        <Text>hotel</Text>
+        <Text>Hotel</Text>
       </NavLink>
       <NavLink to="#rooms">
-        <Text>rooms</Text>
+        <Text>Rooms</Text>
       </NavLink>
       <NavLink to="#experience">
-        <Text>experience</Text>
+        <Text>Experience</Text>
       </NavLink>
       <NavLink to="#restaurant">
-        <Text>restaurant</Text>
+        <Text>Restaurant</Text>
       </NavLink>
       <NavLink to="#contact">
-        <Text>contact</Text>
+        <Text>Contact</Text>
       </NavLink>
     </Menu>
   )
