@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
 import styled from '@emotion/styled'
 
@@ -34,6 +35,8 @@ const NavLink = styled(Link)`
 `
 
 function Header() {
+  const { t } = useTranslation()
+
   return (
     <Menu
       logo={
@@ -41,16 +44,16 @@ function Header() {
           <Logo src={logo} />
         </LogoLink>
       }
-      button={<BookButton size="md" />}
+      button={<BookButton size="md">{t('commons.bookNow')}</BookButton>}
     >
       <NavLink to="#hotel">
-        <Text>Hotel</Text>
+        <Text>{t('nav.hotel')}</Text>
       </NavLink>
       <NavLink to="#experience">
-        <Text>Experience</Text>
+        <Text>{t('nav.experience')}</Text>
       </NavLink>
       <NavLink to="#contact">
-        <Text>Contact</Text>
+        <Text>{t('nav.contact')}</Text>
       </NavLink>
     </Menu>
   )

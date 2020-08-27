@@ -1,3 +1,88 @@
 {
-  "test": "Test"
+  "nav": {
+    "hotel": "Hotel",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Stay in the natural",
+    "desc": "An incredible experience that will free your mind and touch your soul."
+  },
+  "intro": {
+    "title": "Casa Coyote Ruta de los Cenotes",
+    "desc": "A Mayan experience inside the jungle surrounded by Mother Nature and surrounded by spectacular cenotes to renew your energy. Nature will be your best companion",
+    "features": {
+      "location": {
+        "title": "BEST LOCATION",
+        "desc": "Located at km 11 of La Ruta de los Cenotes, in front of Club de Polo el Rey. 10 minutes from the beach in Puerto Morelos."
+      },
+      "nature": {
+        "title": "EXPERIENCE NATURE",
+        "desc": "We offer a unique experience within the magical energy of the Mayan jungle, ideal for couples, ilias, yogis and solo adventures."
+      },
+      "ammenities": {
+        "title": "AMENITIES",
+        "desc": "The property has 4 completely private suites, covering for meditation or daring a pleasant time, each with its bathroom open to nature, the central cabin has a full kitchen and sofa bed."
+      },
+      "private": {
+        "title": "PRIVATE ROOM",
+        "desc": "Very cozy rooms, private ecological suites, private terrace, cool and quiet areas, air conditioning, tapanco for free time, bathrooms open to nature, view of the cenote and more."
+      }
+    }
+  },
+  "rooms": {
+    "title": "Ecological rooms",
+    "desc": [
+      " Located at km 11 of La Ruta de los Cenotes, in front of Club de Polo el Rey. 10 minutes from the beach in Puerto Morelos",
+      "Palapa with tables and bar. Shared full kitchen with refrigerator, oven, grill, coffee maker, shelves and freezer",
+      "We have a work space with high speed internet, bathroom and drink bar."
+    ],
+    "imageDesc": "Natural environment"
+  },
+  "experience": {
+    "title": "Mayan temazcal",
+    "desc": [
+      "Temazcal is a ceremony of physical, mental and spiritual purification. We enter the inipi to let go of what we do not need for our daily life, to let go of our fear, anger, depression and all the things that really do not belong to us. We have a 90 minute ceremony in a group and in a couple. Close your temazcal by swimming in the cenote in the moonlight."
+    ]
+  },
+  "form": {
+    "title": "Send us a message",
+    "desc": "Send a message for more information and we will contact you as soon as possible.",
+    "inputs": {
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "myemail@example.com",
+        "isRequired": "Email is required",
+        "isInvalid": "Email is invalid"
+      },
+      "message": {
+        "label": "Message",
+        "isRequired": "The message cannot be empty"
+      },
+      "button": "Send message"
+    },
+    "success": "Thank you for your message. We will contact you as soon as possible."
+  },
+  "footer": {
+    "desc": "A Mayan experience inside the jungle surrounded by mother nature and surrounded by spectacular cenotes to renew your energy. Nature will be your best companion",
+    "contact": {
+      "title": "CONTACT US",
+      "address": "Located at km 11 of La Ruta de los Cenotes, in front of Club de Polo el Rey. 10 minutes from the beach in Puerto Morelos."
+    },
+    "terms": "© Hotel Casa Coyote Ruta de los Cenotes. All rights reserved. Web development by",
+    "floatingBookNow": {
+      "title": "100% eco-private suites",
+      "subtitle": "Casa Coyote Ruta de los Cenotes"
+    }
+  },
+  "commons": {
+    "viewPhotos": "See photos",
+    "bookNow": "Book now",
+    "nextText": "Next",
+    "prevText": "Prev"
+  }
 }

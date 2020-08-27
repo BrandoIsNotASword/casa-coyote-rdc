@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { v4 } from 'uuid'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
@@ -30,17 +31,17 @@ import FormContact from '../components/formContact'
 import heroBg from '../images/hero-background.jpg'
 
 function IndexPage({ data }) {
+  const { t } = useTranslation()
+
   return (
     <Layout>
       <SEO title="Home" />
       <Hero bg={heroBg}>
         <HeroBody>
-          <HeroTitle>Hospédate en lo natural</HeroTitle>
-          <HeroSubtitle>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit condimentum ipsum.
-          </HeroSubtitle>
+          <HeroTitle>{t('hero.title')} </HeroTitle>
+          <HeroSubtitle>{t('hero.desc')}</HeroSubtitle>
           <HeroCta>
-            <BookButton />
+            <BookButton>{t('commons.bookNow')}</BookButton>
           </HeroCta>
         </HeroBody>
       </Hero>
@@ -48,41 +49,38 @@ function IndexPage({ data }) {
       <Article>
         <Section id="hotel" titleAlign="center">
           <Stack marginBottom={10} textAlign="center" marginX="auto" maxWidth="720px">
-            <Heading as="h3">Casa Coyote Ruta de los Cenotes</Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </Text>
+            <Heading as="h3">{t('intro.title')}</Heading>
+            <Text>{t('intro.desc')}</Text>
           </Stack>
           <Features>
             <FeatureList>
               <FeatureItem
-                alignItems="center"
+                align="center"
                 textAlign="center"
-                title="Natural environment"
-                desc="Available around-the-clock, your personal concierge will handle all the details, from last-minute itinerary changes to exquisite local experiences."
                 icon={<GiCutDiamond size="3rem" />}
+                title={t('intro.features.location.title')}
+                desc={t('intro.features.location.desc')}
               />
               <FeatureItem
-                alignItems="center"
+                align="center"
                 textAlign="center"
-                title="Hidden location"
-                desc="Available around-the-clock, your personal concierge will handle all the details, from last-minute itinerary changes to exquisite local experiences."
                 icon={<GiOakLeaf size="3rem" />}
+                title={t('intro.features.nature.title')}
+                desc={t('intro.features.nature.desc')}
               />
               <FeatureItem
-                alignItems="center"
+                align="center"
                 textAlign="center"
-                title="Ammenities"
-                desc="Available around-the-clock, your personal concierge will handle all the details, from last-minute itinerary changes to exquisite local experiences."
                 icon={<GiStarsStack size="3rem" />}
+                title={t('intro.features.ammenities.title')}
+                desc={t('intro.features.ammenities.desc')}
               />
               <FeatureItem
-                alignItems="center"
+                align="center"
                 textAlign="center"
-                title="Private room"
-                desc="Available around-the-clock, your personal concierge will handle all the details, from last-minute itinerary changes to exquisite local experiences."
                 icon={<GiAirtightHatch size="3rem" />}
+                title={t('intro.features.private.title')}
+                desc={t('intro.features.private.desc')}
               />
             </FeatureList>
           </Features>
@@ -104,41 +102,46 @@ function IndexPage({ data }) {
                 imgStyle={{ objectFit: 'contain' }}
               />
             ))}
-            buttonText="View photos"
+            buttonText={t('commons.viewPhotos')}
           />
         </Section>
 
         <Section id="experience">
           <Stack spacing={16}>
             <ImageContent
-              imageDesc="Natural bungalows"
+              imageDesc={t('rooms.imageDesc')}
               image={data.bungalows.childImageSharp.fixed.src}
             >
-              <Stack spacing={6} shouldWrapChildren>
-                <GiOakLeaf size="3rem" />
-                <Heading as="h3">Natural environment</Heading>
-                <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ultricies mi, at
-                  facilisis lorem. Suspendisse ante ex, tristique ut nibh et, dapibus tempor ex.
-                  Curabitur sollicitudin ultricies odio at interdum. In posuere ullamcorper aliquam.
-                </Text>
-                <BookButton />
+              <Stack spacing={6}>
+                <Heading as="h3">{t('rooms.title')}</Heading>
+                {t('rooms.desc', { returnObjects: true }).map((text) => (
+                  <Text>{text}</Text>
+                ))}
+                <Box>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119867.30049297537!2d-87.51628317897949!3d20.140173585968363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd74cf63f31e1%3A0x905609cdd99ba908!2sCasa%20Coyote%20Tulum!5e0!3m2!1sen!2smx!4v1598066920612!5m2!1sen!2smx"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    style={{ border: '0' }}
+                    aria-hidden="false"
+                    title="Casa Coyote Ruta de los Cenotes"
+                  />
+                </Box>
+                <BookButton width="fit-content">{t('commons.bookNow')}</BookButton>
               </Stack>
             </ImageContent>
             <ImageContent
               reversed
-              imageDesc="Mayan ceremonies"
+              imageDesc="Temazcal"
               image={data.ceremonies.childImageSharp.fixed.src}
             >
-              <Stack spacing={6} shouldWrapChildren>
-                <GiAirtightHatch size="3rem" />
-                <Heading as="h3">Mayan ceremonies</Heading>
-                <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ultricies mi, at
-                  facilisis lorem. Suspendisse ante ex, tristique ut nibh et, dapibus tempor ex.
-                  Curabitur sollicitudin ultricies odio at interdum. In posuere ullamcorper aliquam.
-                </Text>
-                <BookButton />
+              <Stack spacing={6}>
+                <Heading as="h3">{t('experience.title')}</Heading>
+                {t('experience.desc', { returnObjects: true }).map((text) => (
+                  <Text>{text}</Text>
+                ))}
+                <BookButton width="fit-content">{t('commons.bookNow')}</BookButton>
               </Stack>
             </ImageContent>
           </Stack>
@@ -147,24 +150,21 @@ function IndexPage({ data }) {
         <Section id="contact" backgroundColor="gray.100" fullWidth>
           <Box maxWidth="860px" marginX="auto" paddingX={8}>
             <Stack marginBottom={10} textAlign="center" marginX="auto" maxWidth="720px">
-              <Heading as="h3">Casa Coyote Ruta de los Cenotes</Heading>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Text>
+              <Heading as="h3">{t('form.title')}</Heading>
+              <Text>{t('form.desc')}</Text>
             </Stack>
             <FormContact
               hideOnSuccess
-              nameLabel="Name"
-              namePlaceholder="John Smith"
-              emailLabel="Email"
-              emailPlaceholder="myemail@example.com"
-              emailRequiredText="Email is required"
-              emailInvalidText="Email is invalid"
-              messageLabel="Message"
-              messageRequiredText="Message is required"
-              buttonText="Send message"
-              successMessage="Thanks for your submission!"
+              nameLabel={t('form.inputs.name.label')}
+              namePlaceholder={t('form.inputs.name.placeholder')}
+              emailLabel={t('form.inputs.email.label')}
+              emailPlaceholder={t('commons.emailPlaceholder')}
+              emailRequiredText={t('form.inputs.email.required')}
+              emailInvalidText={t('form.inputs.email.invalid')}
+              messageLabel={t('form.inputs.message.label')}
+              messageRequiredText={t('form.inputs.message.required')}
+              buttonText={t('form.inputs.button')}
+              successMessage={t('form.inputs.successMessage')}
             />
           </Box>
         </Section>
@@ -173,11 +173,11 @@ function IndexPage({ data }) {
       <FloatingBanner>
         <Box>
           <Text fontSize="md" fontWeight="bold">
-            100% ecohotel
+            {t('footer.floatingBookNow.title')}
           </Text>
-          <Text fontSize="md">Best price on the market.</Text>
+          <Text fontSize="md">{t('footer.floatingBookNow.subtitle')}</Text>
         </Box>
-        <BookButton size="md" />
+        <BookButton size="md">{t('commons.bookNow')}</BookButton>
       </FloatingBanner>
     </Layout>
   )

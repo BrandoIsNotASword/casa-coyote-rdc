@@ -1,3 +1,88 @@
 {
-  "test": "Prueba"
+  "nav": {
+    "hotel": "Hotel",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hospédate en lo natural",
+    "desc": "Una experiencia increíble que liberará tu mente y tocará tu alma."
+  },
+  "intro": {
+    "title": "Casa Coyote Ruta de los Cenotes",
+    "desc": "Una experiencia maya dentro de la selva rodeada de la madre naturaleza y rodeado de espectaculares cenotes para renovar tu energía. La naturaleza será tu mejor compañera.",
+    "features": {
+      "location": {
+        "title": "MEJOR UBICACIÓN",
+        "desc": "Situado en el km 11 de La Ruta de los Cenotes, frente a Club de Polo el Rey. 10 minutos de la playa en Puerto Morelos."
+      },
+      "nature": {
+        "title": "EXPERIMENTA LA NATURALEZA",
+        "desc": "Ofrecemos una experiencia única dentro de la energía mágica de la selva maya, ideal para parejas, ilias, yoguis y aventuras en solitario."
+      },
+      "ammenities": {
+        "title": "AMENIDADES",
+        "desc": "La propiedad tiene 4 suites completamente privadas, tapando para meditación o osar un rato agradable, cada una con su baño abierto hacia la naturaleza, la cabaña central cuenta con cocina integral y sofá cama."
+      },
+      "private": {
+        "title": "HABITACIÓN PRIVADA",
+        "desc": "Habitaciones muy acogedoras, suites privadas ecológicas, terraza privada, zonas frescas y tranquilas, aire acondicionado, tapanco para ratos libres, baños abiertos a la naturaleza, vista al cenote y más."
+      }
+    }
+  },
+  "rooms": {
+    "title": "Habitaciones ecológicas",
+    "desc": [
+      "Situado en el km 11 de La Ruta de los Cenotes, frente a Club de Polo el Rey. 10 minutos de la playa en Puerto Morelos.",
+      "Palapa con mesas y bar. Cocina completa compartida con refrigerador, horno, Grill, cafetera, repisas y congelador.",
+      "Contamos con un espacio de trabajo con internet de alta velocidad, baño y barra de bebidas."
+    ],
+    "imageDesc": "Natural environment"
+  },
+  "experience": {
+    "title": "Mayan temazcal",
+    "desc": [
+      "El temazcal es una ceremonia de purificación física, mental y espiritual. Entramos en el inipi para dejar ir lo que no necesitamos para nuestra vida diaria, para dejar ir nuestro miedo, ira, depresión y todas las cosas que realmente no nos pertenecen. Tenemos una ceremonia de 90 minutos en grupo y en pareja. Cierra tu temazcal nadando en el cenote a la luz de la luna."
+    ]
+  },
+  "form": {
+    "title": "Envíanos un mensaje",
+    "desc": "Envíe un mensaje para obtener más información y nos pondremos en contacto con usted lo antes posible.",
+    "inputs": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Juán Pérez"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "micorreo@ejemplo.com",
+        "isRequired": "Email es requerido",
+        "isInvalid": "Email es inválido"
+      },
+      "message": {
+        "label": "Mensaje",
+        "isRequired": "El mensaje no puede estar vacío"
+      },
+      "button": "Enviar mensaje"
+    },
+    "success": "Gracias por su mensaje. Nos pondremos en contacto con usted lo antes posible."
+  },
+  "footer": {
+    "desc": "Una experiencia maya dentro de la selva rodeada de la madre naturaleza y rodeado de espectaculares cenotes para renovar tu energía. La naturaleza será tu mejor compañera.",
+    "contact": {
+      "title": "CONTÁCTANOS",
+      "address": "Situado en el km 11 de La Ruta de los Cenotes, frente a Club de Polo el Rey. 10 minutos de la playa en Puerto Morelos."
+    },
+    "terms": "© Hotel Casa Coyote Ruta de los Cenotes. Todos los derechos reservados. Desarrollo web por",
+    "floatingBookNow": {
+      "title": "Suites 100% eco-privadas",
+      "subtitle": "Casa Coyote Ruta de los Cenotes"
+    }
+  },
+  "commons": {
+    "viewPhotos": "Ver fotos",
+    "bookNow": "Reserva ahora",
+    "nextText": "Sig.",
+    "prevText": "Ant."
+  }
 }

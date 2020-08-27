@@ -1,9 +1,20 @@
 import React from 'react'
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next'
 import { useRecoilState } from 'recoil'
 import PropTypes from 'prop-types'
 import { Global, css } from '@emotion/core'
-import { FiMapPin, FiMail, FiPhone, FiInstagram } from 'react-icons/fi'
-import { ThemeProvider, CSSReset, theme, Flex, Text, Stack, Link, Image } from '@chakra-ui/core'
+import { FiMapPin, FiMail, FiPhone, FiInstagram, FiGlobe } from 'react-icons/fi'
+import {
+  ThemeProvider,
+  CSSReset,
+  theme,
+  Flex,
+  Text,
+  Stack,
+  Link,
+  Image,
+  Button,
+} from '@chakra-ui/core'
 
 import Header from './header'
 import WhatsappButton from './whatsappButton'
@@ -82,6 +93,8 @@ const globalStyles = css`
 `
 
 function Layout({ children }) {
+  const { t } = useTranslation()
+  const { changeLanguage, language } = useI18next()
   const [isBookingModalOpen, setIsBookingModalOpen] = useRecoilState(bookingModalState)
 
   return (
@@ -105,19 +118,31 @@ function Layout({ children }) {
               <Link href="/" maxWidth="150px" marginBottom={4}>
                 <Image src={footerLogo} />
               </Link>
-              <Text>
-                Amazing experience that will free your mind & touch your soul. Very cozy rooms, 100%
-                ECO PRIVATE SUITES. Located at the most exclusive área of Tulum.
-              </Text>
+              <Text>{t('footer.desc')}</Text>
+              <Button
+                variant="outline"
+                rightIcon={FiGlobe}
+                marginTop={4}
+                _hover={{ color: 'inherit' }}
+                onClick={() => changeLanguage(language === 'es' ? 'en' : 'es')}
+              >
+                {language === 'es' ? 'English' : 'Español'}
+              </Button>
             </FooterColumn>
 
             <FooterColumn />
+            <FooterColumn />
 
-            <FooterColumn title="Contact us" marginTop={6} direction="column" marginX="auto">
+            <FooterColumn
+              title={t('footer.contact.title')}
+              marginTop={6}
+              direction="column"
+              marginX="auto"
+            >
               <Stack spacing={3}>
                 <Stack isInline align="center" spacing={3} shouldWrapChildren>
                   <FiMapPin size="1.25rem" />
-                  <Text>Carretera Tulum Boca Paila km 9.2</Text>
+                  <Text>{t('footer.contact.address')}</Text>
                 </Stack>
                 <Link href="mailto:reservaciones@hotelcasacoyotetulum.com">
                   <Stack isInline align="center" spacing={3} shouldWrapChildren>
@@ -158,7 +183,7 @@ function Layout({ children }) {
 
           <FooterBottom>
             <Text fontSize="sm" textAlign="center">
-              © Hotel Casa Coyote Ruta de los Cenotes. All Rights Reserved. Web development by{' '}
+              {t('footer.terms')}{' '}
               <a
                 href="https://hmnagency.com/"
                 target="_blank"
