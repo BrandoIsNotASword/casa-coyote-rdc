@@ -152,20 +152,20 @@ function Layout({ children }) {
                     </Text>
                   </Stack>
                 </Link>
-                <Link href="tel:+5219841135252">
+                <Link href="tel:+5219983548467">
                   <Stack isInline align="center" spacing={3} shouldWrapChildren>
                     <FiPhone size="1.25rem" />
-                    <Text>+52 1 984 113 5252</Text>
+                    <Text>+52 1 998 354 8467</Text>
                   </Stack>
                 </Link>
                 <Link
-                  href="https://www.instagram.com/casa_coyote/"
+                  href="https://www.instagram.com/casa_coyote_cenotes/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Stack isInline align="center" spacing={3} shouldWrapChildren>
                     <FiInstagram size="1.25rem" />
-                    <Text>casa_coyote</Text>
+                    <Text>casa_coyote_cenotes</Text>
                   </Stack>
                 </Link>
                 <Image
