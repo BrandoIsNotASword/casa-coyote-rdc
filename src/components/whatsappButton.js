@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import { Flex, Link } from '@chakra-ui/core'
 import { FaWhatsapp } from 'react-icons/fa'
 
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next'
+
 function WhatsappButton() {
+  const { t } = useTranslation()
+
   return (
     <Flex
       zIndex="1"
@@ -21,7 +25,7 @@ function WhatsappButton() {
       boxShadow="0px 0px 6px rgba(0,0,0,0.25)"
     >
       <Link
-        href="https://api.whatsapp.com/send?phone=5219841135252&text="
+        href={`https://api.whatsapp.com/send?phone=+5219983548467&text=${t('commons.whatsapp')}`}
         width="100%"
         height="100%"
         display="inline-grid"

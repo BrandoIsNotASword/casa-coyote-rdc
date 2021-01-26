@@ -73,16 +73,17 @@
       "title": "CONTACT US",
       "address": "Located at km 11 of La Ruta de los Cenotes, in front of Club de Polo el Rey. 10 minutes from the beach in Puerto Morelos."
     },
-    "terms": "© Hotel Casa Coyote Ruta de los Cenotes. All rights reserved. Web development by",
+    "terms": "© San Carlos Ruta de los Cenotes. All rights reserved. Web development by",
     "floatingBookNow": {
       "title": "100% eco-private suites",
-      "subtitle": "Casa Coyote Ruta de los Cenotes"
+      "subtitle": "San Carlos Ruta de los Cenotes"
     }
   },
   "commons": {
     "viewPhotos": "See photos",
     "bookNow": "Book now",
     "nextText": "Next",
-    "prevText": "Prev"
+    "prevText": "Prev",
+    "whatsapp": "Hi, I'm interested in booking at San Carlos..."
   }
 }

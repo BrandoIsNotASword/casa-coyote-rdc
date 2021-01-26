@@ -12,7 +12,7 @@ function BookButton({ children, ...restProps }) {
   return (
     <Button
       size="lg"
-      variantColor="teal"
+      variantColor="orange"
       onClick={() => setIsBookingModalOpen(true)}
       {...restProps}
     >

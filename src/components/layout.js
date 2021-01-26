@@ -27,8 +27,7 @@ import CircularStdMediumWoff2 from '../fonts/CircularStd-Medium.woff2'
 import CircularStdBlackWoff from '../fonts/CircularStd-Black.woff'
 import CircularStdBlackWoff2 from '../fonts/CircularStd-Black.woff2'
 
-import footerLogo from '../images/casa-coyote-logo.png'
-import grupoManifestoLogo from '../images/grupo-manifesto-logo.png'
+import footerLogo from '../images/logo.png'
 
 import { bookingModalState } from '../store'
 
@@ -115,7 +114,7 @@ function Layout({ children }) {
               maxWidth="350px"
               marginX="auto"
             >
-              <Link href="/" maxWidth="150px" marginBottom={4}>
+              <Link href="/" maxWidth="300px" marginBottom={4}>
                 <Image src={footerLogo} />
               </Link>
               <Text>{t('footer.desc')}</Text>
@@ -131,7 +130,6 @@ function Layout({ children }) {
             </FooterColumn>
 
             <FooterColumn />
-            <FooterColumn />
 
             <FooterColumn
               title={t('footer.contact.title')}
@@ -144,11 +142,11 @@ function Layout({ children }) {
                   <FiMapPin size="1.25rem" />
                   <Text>{t('footer.contact.address')}</Text>
                 </Stack>
-                <Link href="mailto:reservaciones@hotelcasacoyotetulum.com">
+                <Link href="mailto:mary@sancarlosmr.com">
                   <Stack isInline align="center" spacing={3} shouldWrapChildren>
                     <FiMail size="1.25rem" />
                     <Text wordBreak="break-word" lineHeight="normal">
-                      admongrupomanifesto@gmail.com
+                      mary@sancarlosmr.com
                     </Text>
                   </Stack>
                 </Link>
@@ -159,22 +157,15 @@ function Layout({ children }) {
                   </Stack>
                 </Link>
                 <Link
-                  href="https://www.instagram.com/casa_coyote_cenotes/"
+                  href="https://www.instagram.com/sancarlosecolodge/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Stack isInline align="center" spacing={3} shouldWrapChildren>
                     <FiInstagram size="1.25rem" />
-                    <Text>casa_coyote_cenotes</Text>
+                    <Text>sancarlosecolodge</Text>
                   </Stack>
                 </Link>
-                <Image
-                  height="100%"
-                  width="100%"
-                  marginX="auto"
-                  maxWidth="100px"
-                  src={grupoManifestoLogo}
-                />
               </Stack>
             </FooterColumn>
           </FooterBody>

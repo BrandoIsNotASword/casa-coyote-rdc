@@ -63,8 +63,6 @@ export function Footer({ children, ...restProps }) {
       as="footer"
       direction="column"
       justify="space-between"
-      backgroundColor="black"
-      color="white"
       paddingX={{ base: 6, lg: 20 }}
       paddingY={10}
       alignItems="center"
