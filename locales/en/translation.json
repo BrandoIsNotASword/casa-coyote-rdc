@@ -85,5 +85,57 @@
     "nextText": "Next",
     "prevText": "Prev",
     "whatsapp": "Hi, I'm interested in booking at San Carlos..."
+  },
+  "landing": {
+    "title": "5% off Last Minute Promotion - San Carlos",
+    "hero": {
+      "title": "5% off Last Minute",
+      "desc": "Book now and get up to:",
+      "terms": "Non-refundable. Continental breakfast included. Not applicable with other promotions."
+    },
+    "why": {
+      "title": "Why stay at Dos Ceibas?",
+      "features": {
+        "beachClub": {
+          "title": "Beach club",
+          "desc": "Enjoy the unparalleled Caribbean beaches just a few steps away, or dazzle yourself by staying in our oceanfront rooms. Also we have bicicles and cars for rent if you want to move around or go to the pueblo."
+        },
+        "naturalExperience": {
+          "title": "Natural experience",
+          "desc": "Experience the blended nature in each one of our rooms and the mayan culture inspired design on them. We do our best to provide you with a truly natural experience of Tulum."
+        },
+        "deliciousFood": {
+          "title": "Delicious food",
+          "desc": "We invite you to try our dishes of various Caribbean fruits, eggs as you like, hot cakes with sauces and incomparable flavors. All this served in a landscape without equal with a sunrise in front of the sea."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Does Dos Ceibas have bikes or cars for rental?",
+          "answer": "Yes! We have cars and bikes for rent, just ask our lovely staff and they can help you."
+        },
+        {
+          "question": "Where is Dos Ceibas located in Tulum?",
+          "answer": "Dos Ceibas is located in Carretera Tulum Boca Paila Km. 10, Tulum 77780, Mexico."
+        },
+        {
+          "question": "How can I contact Dos Ceibas?",
+          "answer": "You can reach us by phone at +52 1 984-198-5461 and by email at info@dosceibas.com"
+        },
+        {
+          "question": "Is it safe to book online?",
+          "answer": "Yes! We use a commercial booking engine that has everthing you need to feel secure that your information is going to be protected. A 256-bit encryption system is used for send your information."
+        }
+      ]
+    },
+    "commons": {
+      "bookNow": "Book now",
+      "viewPhotos": "View photos",
+      "nextSlide": "Next",
+      "prevSlide": "Prev"
+    }
   }
 }

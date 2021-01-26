@@ -85,5 +85,57 @@
     "nextText": "Sig.",
     "prevText": "Ant.",
     "whatsapp": "Hola, estoy interesado en reservar en San Carlos..."
+  },
+  "landing": {
+    "title": "60% de descuento en la promoción de última hora - Dos Ceibas",
+    "hero": {
+      "title": "60% de descuento",
+      "desc": "Reserva ahora y obtén hasta:",
+      "terms": "No reembolsable, desayuno continental incluido. No se aplica con otras promociones."
+    },
+    "why": {
+      "title": "¿Por qué quedarse en Dos Ceibas?",
+      "features": {
+        "beachClub": {
+          "title": "Club de playa",
+          "desc": "Disfrute de las inigualables playas caribeñas a pocos pasos, o deslúmbrese alojándose en nuestras habitaciones frente al mar. También tenemos bicicletas y coches de alquiler si quieres moverte o ir al pueblo."
+        },
+        "naturalExperience": {
+          "title": "Experiencia natural",
+          "desc": "Experimente la naturaleza mezclada en cada una de nuestras habitaciones y el diseño inspirado por la cultura maya en ellas. Hacemos todo lo posible para proporcionarle una experiencia verdaderamente natural de Tulum."
+        },
+        "deliciousFood": {
+          "title": "Comida deliciosa",
+          "desc": "Le invitamos a probar nuestros platos de diversas frutas caribeñas, huevos a su gusto, hot cakes con salsas y sabores incomparables. Todo esto servido en un paisaje sin igual con un amanecer frente al mar."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿Dos Ceibas tiene bicicletas o coches para rentar?",
+          "answer": "¡Sí! Tenemos coches y bicicletas para rentar, pregúntele a nuestro encantador personal y ellos podrán ayudarle."
+        },
+        {
+          "question": "¿Dónde se encuentra Dos Ceibas en Tulum?",
+          "answer": "Dos Ceibas se encuentra en la Carretera Tulum Boca Paila Km. 10, Tulum 77780, México."
+        },
+        {
+          "question": "¿Cómo puedo contactar con Dos Ceibas?",
+          "answer": "Puede contactarnos por teléfono al +52 1 984-198-5461 y por correo electrónico a info@dosceibas.com."
+        },
+        {
+          "question": "¿Es seguro reservar en línea?",
+          "answer": "¡Sí! Utilizamos un motor de reserva comercial que tiene todo lo necesario para que se sienta seguro de que su información va a estar protegida. Un sistema de encriptación de 256 bits se utiliza para enviar tu información."
+        }
+      ]
+    },
+    "commons": {
+      "bookNow": "Reserva ahora",
+      "viewPhotos": "Ver fotos",
+      "nextSlide": "Sig.",
+      "prevSlide": "Ant."
+    }
   }
 }

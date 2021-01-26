@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Casa Coyote Ruta de los Cenotes`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `San Carlos Ruta de los Cenotes`,
+    description: `A Mayan experience inside the jungle surrounded by Mother Nature and surrounded by spectacular cenotes to renew your energy. Nature will be your best companion.`,
     author: `@gatsbyjs`,
   },
   plugins: [
