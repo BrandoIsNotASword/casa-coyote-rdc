@@ -28,7 +28,6 @@ function Menu({ children, logo, button, navPosition, ...restProps }) {
     <Flex
       as="header"
       justify="space-between"
-      backgroundColor="black"
       minHeight={{ base: 'auto', lg: 20 }}
       paddingX={{ base: 4, lg: 20 }}
       paddingTop={{ base: 3, lg: 0 }}

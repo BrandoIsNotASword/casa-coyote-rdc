@@ -8,14 +8,14 @@ import { Text } from '@chakra-ui/core'
 import { Menu } from '../ui'
 import BookButton from '../components/bookButton'
 
-import logo from '../images/casa-coyote-logo.png'
+import logo from '../images/logo.png'
 
 const Logo = styled.img`
-  height: 50px;
+  height: 30px;
   width: auto;
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    height: 65px;
+    height: 50px;
   }
 `
 
@@ -24,7 +24,6 @@ const LogoLink = styled(Link)`
 `
 
 const NavLink = styled(Link)`
-  color: white;
   opacity: 0.85;
   padding: 10px 0;
   display: inline-block;

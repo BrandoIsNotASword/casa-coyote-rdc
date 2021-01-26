@@ -22,7 +22,7 @@ function BookingModal({ isOpen, lang, onClose }) {
           <iframe
             title="Booking Engine"
             style={{ height: '100vh', width: '100%' }}
-            src={`https://rbe.zaviaerp.com/?zbe_hotel_id=259&lng=${lang}`}
+            src={`https://rbe.zaviaerp.com/?hotel=sancarlos&lng=${lang}`}
           />
         </ModalContent>
       </Modal>
