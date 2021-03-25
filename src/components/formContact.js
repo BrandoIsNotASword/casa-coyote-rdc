@@ -26,7 +26,6 @@ function FormContact({
   messageRequiredText,
   buttonText,
   successMessage,
-  onSubmit,
 }) {
   const [success, setSuccess] = useState(false)
   const formik = useFormik({
@@ -46,8 +45,17 @@ function FormContact({
 
       return errors
     },
-    onSubmit: (values, { setSubmitting }) => {
-      onSubmit(values, (success) => setSuccess(success))
+    onSubmit: async (values, { setSubmitting }) => {
+      const res = await fetch('https://formspree.io/p/1599905784974539935/f/contactForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      if (res.ok) setSuccess(true)
+
       setSubmitting(false)
     },
   })
@@ -55,7 +63,7 @@ function FormContact({
   if (hideOnSuccess && success) {
     return (
       <Flex padding={10} justify="center">
-        <Text fontWeight="bold" fontSize="xl">
+        <Text fontWeight="bold" fontSize="xl" textAlign="center">
           {successMessage}
         </Text>
       </Flex>

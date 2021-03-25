@@ -51,6 +51,9 @@ function Header() {
       <NavLink to="#experience">
         <Text>{t('nav.experience')}</Text>
       </NavLink>
+      <NavLink to="#puerto-morelos">
+        <Text>Puerto Morelos</Text>
+      </NavLink>
       <NavLink to="#contact">
         <Text>{t('nav.contact')}</Text>
       </NavLink>

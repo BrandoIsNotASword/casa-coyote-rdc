@@ -45,6 +45,21 @@
       "El temazcal es una ceremonia de purificación física, mental y espiritual. Entramos en el inipi para dejar ir lo que no necesitamos para nuestra vida diaria, para dejar ir nuestro miedo, ira, depresión y todas las cosas que realmente no nos pertenecen. Tenemos una ceremonia de 90 minutos en grupo y en pareja. Cierra tu temazcal nadando en el cenote a la luz de la luna."
     ]
   },
+  "puertoMorelos1": {
+    "title": "San Carlos se encuentra en Ruta de los cenotes de Puerto Morelos",
+    "desc": [
+      "Esta ruta es un corredor de 35 kilómetros entre Puerto Morelos y Leona Vicario, donde se encuentran algunos de los cenotes más espectaculares de la Riviera Maya y de la Península de Yucatán. Entre una densa vegetación, con el sonido de las aves y otras especies de la jungla tropical, estos cuerpos de agua obsequian su belleza y frescura para nadar y admirar su fascinante mundo. Entre los mejores cenotes de la ruta se encuentran Siete Bocas, Boca de Puma, Lucero Verde, Kin-Há, Popol Vuh y el parque de aventura Selvática.",
+      "Puerto Morelos se encuentra en la costa Caribe quintanarroense y es accesible desde Cancún y Playa del Carmen por la Carretera Federal 307. El acceso aéreo más inmediato es por el Aeropuerto Internacional de Cancún."
+    ]
+  },
+  "puertoMorelos2": {
+    "title": "Servicios que encontrarás en Puerto Morelos",
+    "desc": [
+      "En Puerto Morelos encontrarás todos los servicios necesarios para unas inolvidables vacaciones en un ambiente más tranquilo que el de Cancún y Playa del Carmen. Restaurantes de mariscos y pescados, cocina internacional, Puerto Morelos es un acogedor pueblo de pescadores que conserva las tradiciones de la costa Caribe mexicana. Alrededor de la plaza se encuentran cafés, restaurantes, bares, tiendas y heladerías.",
+      "Puerto Morelos cuenta con espectaculares playas que hacen una bella gradación de colores entre un verde brillante y un intenso azul turquesa.",
+      "Las playas de Puerto Morelos, de aguas limpias, cálidas y cristalinas, son un remanso de paz en medio del bullicio y congestionamiento de Cancún y Playa del Carmen en temporada alta. La playa principal es de fina arena blanca y a lo largo del arenal hay bares y restaurantes."
+    ]
+  },
   "form": {
     "title": "Envíanos un mensaje",
     "desc": "Envíe un mensaje para obtener más información y nos pondremos en contacto con usted lo antes posible.",
@@ -73,10 +88,10 @@
       "title": "CONTÁCTANOS",
       "address": "Situado en el km 11 de La Ruta de los Cenotes, frente a Club de Polo el Rey. 10 minutos de la playa en Puerto Morelos."
     },
-    "terms": "© Hotel Casa Coyote Ruta de los Cenotes. Todos los derechos reservados. Desarrollo web por",
+    "terms": "© Hotel San Carlos Ruta de los Cenotes. Todos los derechos reservados. Desarrollo web por",
     "floatingBookNow": {
       "title": "Suites 100% eco-privadas",
-      "subtitle": "Casa Coyote Ruta de los Cenotes"
+      "subtitle": "San Carlos Ruta de los Cenotes"
     }
   },
   "commons": {
@@ -132,6 +147,7 @@
       ]
     },
     "commons": {
+      "emailPlaceholder": "micorreo@ejemplo.com",
       "bookNow": "Reserva ahora",
       "viewPhotos": "Ver fotos",
       "nextSlide": "Sig.",

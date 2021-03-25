@@ -3,6 +3,7 @@ module.exports = {
     title: `San Carlos Ruta de los Cenotes`,
     description: `A Mayan experience inside the jungle surrounded by Mother Nature and surrounded by spectacular cenotes to renew your energy. Nature will be your best companion.`,
     author: `@gatsbyjs`,
+    siteUrl: `https://sancarlosmr.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -106,11 +106,38 @@ function IndexPage({ data }) {
           />
         </Section>
 
+        <Section id="puerto-morelos">
+          <Stack spacing={16}>
+            <ImageContent imageDesc="Cenote" image={data.featured2.childImageSharp.fixed.src}>
+              <Stack spacing={6}>
+                <Heading as="h3">{t('puertoMorelos1.title')}</Heading>
+                {t('puertoMorelos1.desc', { returnObjects: true }).map((text) => (
+                  <Text>{text}</Text>
+                ))}
+                <BookButton width="fit-content">{t('commons.bookNow')}</BookButton>
+              </Stack>
+            </ImageContent>
+            <ImageContent
+              reversed
+              imageDesc="Puerto Morelos"
+              image={data.featured1.childImageSharp.fixed.src}
+            >
+              <Stack spacing={6}>
+                <Heading as="h3">{t('puertoMorelos2.title')}</Heading>
+                {t('puertoMorelos2.desc', { returnObjects: true }).map((text) => (
+                  <Text>{text}</Text>
+                ))}
+                <BookButton width="fit-content">{t('commons.bookNow')}</BookButton>
+              </Stack>
+            </ImageContent>
+          </Stack>
+        </Section>
+
         <Section id="experience">
           <Stack spacing={16}>
             <ImageContent
               imageDesc={t('rooms.imageDesc')}
-              image={data.bungalows.childImageSharp.fixed.src}
+              image={data.ecorooms.childImageSharp.fixed.src}
             >
               <Stack spacing={6}>
                 <Heading as="h3">{t('rooms.title')}</Heading>
@@ -119,7 +146,7 @@ function IndexPage({ data }) {
                 ))}
                 <Box>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119867.30049297537!2d-87.51628317897949!3d20.140173585968363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd74cf63f31e1%3A0x905609cdd99ba908!2sCasa%20Coyote%20Tulum!5e0!3m2!1sen!2smx!4v1598066920612!5m2!1sen!2smx"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.351314705542!2d-87.01438048507023!3d20.857885386091173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDUxJzI4LjQiTiA4N8KwMDAnNDMuOSJX!5e0!3m2!1sen!2smx!4v1611696341308!5m2!1sen!2smx"
                     width="100%"
                     height="100%"
                     frameBorder="0"
@@ -158,13 +185,13 @@ function IndexPage({ data }) {
               nameLabel={t('form.inputs.name.label')}
               namePlaceholder={t('form.inputs.name.placeholder')}
               emailLabel={t('form.inputs.email.label')}
-              emailPlaceholder={t('commons.emailPlaceholder')}
-              emailRequiredText={t('form.inputs.email.required')}
-              emailInvalidText={t('form.inputs.email.invalid')}
+              emailPlaceholder={t('form.inputs.email.placeholder')}
+              emailRequiredText={t('form.inputs.email.isRequired')}
+              emailInvalidText={t('form.inputs.email.isInvalid')}
               messageLabel={t('form.inputs.message.label')}
-              messageRequiredText={t('form.inputs.message.required')}
+              messageRequiredText={t('form.inputs.message.isRequired')}
               buttonText={t('form.inputs.button')}
-              successMessage={t('form.inputs.successMessage')}
+              successMessage={t('form.success')}
             />
           </Box>
         </Section>
@@ -186,7 +213,7 @@ function IndexPage({ data }) {
 export const query = graphql`
   fragment fixedImage on File {
     childImageSharp {
-      fixed(width: 520, quality: 65) {
+      fixed(width: 520, quality: 75) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -194,6 +221,18 @@ export const query = graphql`
 
   query {
     bungalows: file(relativePath: { eq: "bungalows.jpg" }) {
+      ...fixedImage
+    }
+
+    ecorooms: file(relativePath: { eq: "eco-rooms.jpg" }) {
+      ...fixedImage
+    }
+
+    featured1: file(relativePath: { eq: "puerto-morelos-featured-1.jpg" }) {
+      ...fixedImage
+    }
+
+    featured2: file(relativePath: { eq: "puerto-morelos-featured-2.jpg" }) {
       ...fixedImage
     }
 

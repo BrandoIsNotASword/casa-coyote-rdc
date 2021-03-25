@@ -45,6 +45,21 @@
       "Temazcal is a ceremony of physical, mental and spiritual purification. We enter the inipi to let go of what we do not need for our daily life, to let go of our fear, anger, depression and all the things that really do not belong to us. We have a 90 minute ceremony in a group and in a couple. Close your temazcal by swimming in the cenote in the moonlight."
     ]
   },
+  "puertoMorelos1": {
+    "title": "San Carlos is located on the Puerto Morelos cenotes route",
+    "desc": [
+      "This route is a 35 kilometer corridor between Puerto Morelos and Leona Vicario, where some of the most spectacular cenotes of the Riviera Maya and the Yucatan Peninsula are located. Among dense vegetation, with the sound of birds and other species of the tropical jungle, these bodies of water offer their beauty and freshness for swimming and admiring their fascinating world. Among the best cenotes on the route are Siete Bocas, Boca de Puma, Lucero Verde, Kin-Há, Popol Vuh and the Selvática adventure park.",
+      "Puerto Morelos se encuentra en la costa Caribe quintanarroense y es accesible desde Cancún y Playa del Carmen por la Carretera Federal 307. El acceso aéreo más inmediato es por el Aeropuerto Internacional de Cancún."
+    ]
+  },
+  "puertoMorelos2": {
+    "title": "Services you will find in Puerto Morelos",
+    "desc": [
+      "In Puerto Morelos you will find all the necessary services for an unforgettable vacation in a more peaceful environment than Cancun and Playa del Carmen. Seafood restaurants, international cuisine, Puerto Morelos is a cozy fishing village that preserves the traditions of the Mexican Caribbean coast. Around the plaza are cafes, restaurants, bars, stores and ice cream parlors.",
+      "Puerto Morelos has spectacular beaches that make a beautiful shades of colors between a bright green and an intense turquoise blue.",
+      "The beaches of Puerto Morelos, with clean, warm and crystalline waters, are a haven of peace amidst the bustle and congestion of Cancun and Playa del Carmen in high season. The main beach is fine white sand and along the sandy beach there are bars and restaurants."
+    ]
+  },
   "form": {
     "title": "Send us a message",
     "desc": "Send a message for more information and we will contact you as soon as possible.",
@@ -73,7 +88,7 @@
       "title": "CONTACT US",
       "address": "Located at km 11 of La Ruta de los Cenotes, in front of Club de Polo el Rey. 10 minutes from the beach in Puerto Morelos."
     },
-    "terms": "© San Carlos Ruta de los Cenotes. All rights reserved. Web development by",
+    "terms": "© Hotel San Carlos Ruta de los Cenotes. All rights reserved. Web development by",
     "floatingBookNow": {
       "title": "100% eco-private suites",
       "subtitle": "San Carlos Ruta de los Cenotes"
@@ -132,6 +147,7 @@
       ]
     },
     "commons": {
+      "emailPlaceholder": "myemail@example.com",
       "bookNow": "Book now",
       "viewPhotos": "View photos",
       "nextSlide": "Next",
